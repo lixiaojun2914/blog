@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>hexo-indigo+github+nginx博客搭建过程 | 夜航的小王子 | 记录学习的技能和遇到的问题</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="blog,hexo,nginx">
+    <meta name="description" content="安装node.js1apt-get -y install nodejs 安装git1apt-get -y install git 安装nginx1apt-get -y install nginx 安装hexo1npm install -g hexo-cli 配置hexo 新建hexo项目 1234mkdir ~/bashhexo init ~/bashcd ~/bashnpm install  安">
+<meta name="keywords" content="blog,hexo,nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo-indigo+github+nginx博客搭建过程">
+<meta property="og:url" content="http://www.lixiaojun.tk/2019/01/21/blog搭建过程/index.html">
+<meta property="og:site_name" content="夜航的小王子">
+<meta property="og:description" content="安装node.js1apt-get -y install nodejs 安装git1apt-get -y install git 安装nginx1apt-get -y install nginx 安装hexo1npm install -g hexo-cli 配置hexo 新建hexo项目 1234mkdir ~/bashhexo init ~/bashcd ~/bashnpm install  安">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-20T08:51:25.710Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo-indigo+github+nginx博客搭建过程">
+<meta name="twitter:description" content="安装node.js1apt-get -y install nodejs 安装git1apt-get -y install git 安装nginx1apt-get -y install nginx 安装hexo1npm install -g hexo-cli 配置hexo 新建hexo项目 1234mkdir ~/bashhexo init ~/bashcd ~/bashnpm install  安">
+    
+        <link rel="alternate" type="application/atom+xml" title="夜航的小王子" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Li Xiaojun</h5>
+          <a href="mailto:982090951@qq.com" title="982090951@qq.com" class="mail">982090951@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/lixiaojun2914" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">hexo-indigo+github+nginx博客搭建过程</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">hexo-indigo+github+nginx博客搭建过程</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-01-21T07:07:48.000Z" itemprop="datePublished" class="page-time">
+  2019-01-21
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/web-server/">web server</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装node-js"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装node.js</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装git"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装git</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装nginx"><span class="post-toc-number">3.</span> <span class="post-toc-text">安装nginx</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装hexo"><span class="post-toc-number">4.</span> <span class="post-toc-text">安装hexo</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#配置hexo"><span class="post-toc-number">5.</span> <span class="post-toc-text">配置hexo</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#配置-etc-nginx-nginx-conf"><span class="post-toc-number">6.</span> <span class="post-toc-text">配置/etc/nginx/nginx.conf</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#启动nginx服务"><span class="post-toc-number">7.</span> <span class="post-toc-text">启动nginx服务</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#新建文章"><span class="post-toc-number">8.</span> <span class="post-toc-text">新建文章</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#生成页面并保存"><span class="post-toc-number">9.</span> <span class="post-toc-text">生成页面并保存</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-blog搭建过程" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">hexo-indigo+github+nginx博客搭建过程</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-01-21 15:07:48" datetime="2019-01-21T07:07:48.000Z" itemprop="datePublished">2019-01-21</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/web-server/">web server</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get -y install nodejs</span><br></pre></td></tr></table></figure>
+<h1 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get -y install git</span><br></pre></td></tr></table></figure>
+<h1 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get -y install nginx</span><br></pre></td></tr></table></figure>
+<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h1 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo"></a>配置hexo</h1><ul>
+<li><p>新建hexo项目</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/bash</span><br><span class="line">hexo init ~/bash</span><br><span class="line"><span class="built_in">cd</span> ~/bash</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装indigo主题</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载主题</span></span><br><span class="line">git <span class="built_in">clone</span> git@github.com:yscoder/hexo-theme-indigo.git themes/indigo</span><br><span class="line"><span class="comment"># 安装相关依赖</span></span><br><span class="line">npm install hexo-renderer-less --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-json-content --save</span><br><span class="line">npm install hexo-helper-qrcode --save</span><br><span class="line"><span class="comment"># 开启tags页面</span></span><br><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置hexo的_config.yml<br>以下只列出修改的位置</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置博客相关信息</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">夜航的小王子</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">记录学习的技能和遇到的问题</span></span><br><span class="line"><span class="attr">description:</span> </span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Li</span> <span class="string">Xiaojun</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">http://www.lixiaojun.tk</span></span><br><span class="line"><span class="attr">email:</span> <span class="number">982090951</span><span class="string">@qq.com</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 主题配置</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">indigo</span></span><br><span class="line"><span class="attr">feed:</span> </span><br><span class="line"><span class="attr">        type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">        path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">        limit:</span> <span class="number">0</span></span><br><span class="line"><span class="attr">jsonContent:</span></span><br><span class="line"><span class="attr">        meta:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">        pages:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">        posts:</span></span><br><span class="line"><span class="attr">                title:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">                date:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">                path:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">                text:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">                raw:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">                content:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">                slug:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">                updated:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">                comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">                link:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">                permalink:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">                excerpt:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">                categories:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">                tags:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 部署到git</span></span><br><span class="line"><span class="attr">deploy:</span> </span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/lixiaojun2914/blog.git</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置themes/indigo目录的_config.yml<br>以下只列出修改的位置</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">配置导航栏</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span></span><br><span class="line"><span class="attr">    text:</span> <span class="string">主页</span></span><br><span class="line"><span class="attr">    url:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">  archives:</span></span><br><span class="line"><span class="attr">    text:</span> <span class="string">文章</span></span><br><span class="line"><span class="attr">    url:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">  tags:</span></span><br><span class="line"><span class="attr">    text:</span> <span class="string">标签</span></span><br><span class="line"><span class="attr">    url:</span> <span class="string">/tags</span></span><br><span class="line">  <span class="comment"># th-list:</span></span><br><span class="line">  <span class="comment">#   text: 分类</span></span><br><span class="line">  <span class="comment">#   url: /categories</span></span><br><span class="line"><span class="attr">  github:</span></span><br><span class="line"><span class="attr">    url:</span> <span class="attr">https://github.com/lixiaojun2914</span></span><br><span class="line"><span class="attr">    target:</span> <span class="string">_blank</span></span><br><span class="line">  <span class="comment"># weibo:</span></span><br><span class="line">  <span class="comment">#   url: http://www.weibo.com/ysweb</span></span><br><span class="line">  <span class="comment">#   target: _blank</span></span><br><span class="line">  <span class="comment"># link:</span></span><br><span class="line">  <span class="comment">#   text: 管理</span></span><br><span class="line">  <span class="comment">#   url: /admin</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 你的头像url</span></span><br><span class="line"><span class="attr">avatar:</span> <span class="string">/img/avatar.jpg</span></span><br><span class="line"><span class="comment"># avatar link</span></span><br><span class="line"><span class="attr">avatar_link:</span> <span class="string">/</span></span><br><span class="line"><span class="comment"># 头像背景图</span></span><br><span class="line"><span class="attr">brand:</span> <span class="string">/img/brand.jpg</span></span><br><span class="line"><span class="comment"># favicon</span></span><br><span class="line"><span class="attr">favicon:</span> <span class="string">/favicon.ico</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># email</span></span><br><span class="line"><span class="attr">email:</span> <span class="number">982090951</span><span class="string">@qq.com</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否开启打赏，关闭 reward: false</span></span><br><span class="line"><span class="attr">reward:</span> <span class="literal">false</span></span><br><span class="line">  </span><br><span class="line"><span class="comment"># 配置valine评论系统</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span> <span class="comment"># 如果你想使用valine，请将值设置为 true</span></span><br><span class="line"><span class="attr">  appId:</span>  <span class="string">your</span> <span class="string">appid</span> <span class="comment"># your leancloud appId</span></span><br><span class="line"><span class="attr">  appKey:</span>  <span class="string">your</span> <span class="string">appkey</span> <span class="comment"># your leancloud appKey</span></span><br><span class="line"><span class="attr">  notify:</span> <span class="literal">false</span> <span class="comment"># Mail notify</span></span><br><span class="line"><span class="attr">  verify:</span> <span class="literal">false</span> <span class="comment"># Verify code</span></span><br><span class="line"><span class="attr">  avatar:</span> <span class="string">mm</span> <span class="comment"># Gravatar style : mm/identicon/monsterid/wavatar/retro/hide</span></span><br><span class="line"><span class="attr">  placeholder:</span> <span class="string">ヾﾉ≧∀≦)o来啊，快活啊!</span>  <span class="comment"># Comment Box placeholder</span></span><br><span class="line"><span class="attr">  guest_info:</span> <span class="string">nick,mail,link</span> <span class="comment"># Comment header info</span></span><br><span class="line"><span class="attr">  pageSize:</span> <span class="number">10</span> <span class="comment"># comment list page size</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置source/tags/index.md</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Tags</span><br><span class="line">date: 2019-01-20 08:19:25</span><br><span class="line">layout: tags</span><br><span class="line">comments: false # 关闭tags的评论</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="配置-etc-nginx-nginx-conf"><a href="#配置-etc-nginx-nginx-conf" class="headerlink" title="配置/etc/nginx/nginx.conf"></a>配置/etc/nginx/nginx.conf</h1><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># user www-data;</span></span><br><span class="line"><span class="attribute">user</span> root;</span><br><span class="line"><span class="attribute">worker_processes</span> auto;</span><br><span class="line"><span class="attribute">pid</span> /run/nginx.pid;</span><br><span class="line"><span class="attribute">include</span> /etc/nginx/modules-enabled/<span class="regexp">*.conf</span>;</span><br><span class="line"></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">	<span class="attribute">worker_connections</span> <span class="number">768</span>;</span><br><span class="line">	<span class="comment"># multi_accept on;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">##</span></span><br><span class="line">	<span class="comment"># Basic Settings</span></span><br><span class="line">	<span class="comment">##</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">sendfile</span> <span class="literal">on</span>;</span><br><span class="line">	<span class="attribute">tcp_nopush</span> <span class="literal">on</span>;</span><br><span class="line">	<span class="attribute">tcp_nodelay</span> <span class="literal">on</span>;</span><br><span class="line">	<span class="attribute">keepalive_timeout</span> <span class="number">65</span>;</span><br><span class="line">	<span class="attribute">types_hash_max_size</span> <span class="number">2048</span>;</span><br><span class="line">	<span class="comment"># server_tokens off;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment"># server_names_hash_bucket_size 64;</span></span><br><span class="line">	<span class="comment"># server_name_in_redirect off;</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">include</span> /etc/nginx/mime.types;</span><br><span class="line">	<span class="attribute">default_type</span> application/octet-stream;</span><br><span class="line"></span><br><span class="line">	<span class="comment">##</span></span><br><span class="line">	<span class="comment"># SSL Settings</span></span><br><span class="line">	<span class="comment">##</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>; <span class="comment"># Dropping SSLv3, ref: POODLE</span></span><br><span class="line">	<span class="attribute">ssl_prefer_server_ciphers</span> <span class="literal">on</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">##</span></span><br><span class="line">	<span class="comment"># Logging Settings</span></span><br><span class="line">	<span class="comment">##</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">access_log</span> /var/log/nginx/access.log;</span><br><span class="line">	<span class="attribute">error_log</span> /var/log/nginx/error.log;</span><br><span class="line"></span><br><span class="line">	<span class="comment">##</span></span><br><span class="line">	<span class="comment"># Gzip Settings</span></span><br><span class="line">	<span class="comment">##</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">gzip</span> <span class="literal">on</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 注释下面两行,否则默认显示nginx导航页</span></span><br><span class="line">	<span class="comment">#include /etc/nginx/conf.d/*.conf;</span></span><br><span class="line">	<span class="comment">#include /etc/nginx/sites-enabled/*;</span></span><br><span class="line">	<span class="section">server</span> &#123;</span><br><span class="line">		<span class="comment"># server_name 127.0.0.1;</span></span><br><span class="line">		<span class="attribute">location</span> / &#123;</span><br><span class="line">			<span class="attribute">root</span> /root/blog/public; <span class="comment"># 渲染后的静态页面所在位置</span></span><br><span class="line">			<span class="attribute">index</span> index.html; <span class="comment"># 启动后显示的主页面</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="启动nginx服务"><a href="#启动nginx服务" class="headerlink" title="启动nginx服务"></a>启动nginx服务</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx start</span><br></pre></td></tr></table></figure>
+<h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h1><p>方法一：使用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new 文章名</span><br></pre></td></tr></table></figure></p>
+<p>方法2：<br>直接在source/_posts内新建一个 文章名.md 文件</p>
+<h1 id="生成页面并保存"><a href="#生成页面并保存" class="headerlink" title="生成页面并保存"></a>生成页面并保存</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-02-20T08:51:25.710Z" itemprop="dateUpdated">2019-02-20 16:51:25</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://www.lixiaojun.tk">
+            <img src="/img/avatar.jpg" alt="Li Xiaojun">
+            Li Xiaojun
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.lixiaojun.tk/2019/01/21/blog搭建过程/&title=《hexo-indigo+github+nginx博客搭建过程》 — 夜航的小王子&pic=http://www.lixiaojun.tk/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.lixiaojun.tk/2019/01/21/blog搭建过程/&title=《hexo-indigo+github+nginx博客搭建过程》 — 夜航的小王子&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.lixiaojun.tk/2019/01/21/blog搭建过程/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo-indigo+github+nginx博客搭建过程》 — 夜航的小王子&url=http://www.lixiaojun.tk/2019/01/21/blog搭建过程/&via=http://www.lixiaojun.tk" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.lixiaojun.tk/2019/01/21/blog搭建过程/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/02/14/C语言标准库常用字符串处理函数/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">C语言标准库常用字符串处理函数</h4>
+      </a>
+    </div>
+  
+
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Li Xiaojun &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.lixiaojun.tk/2019/01/21/blog搭建过程/&title=《hexo-indigo+github+nginx博客搭建过程》 — 夜航的小王子&pic=http://www.lixiaojun.tk/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.lixiaojun.tk/2019/01/21/blog搭建过程/&title=《hexo-indigo+github+nginx博客搭建过程》 — 夜航的小王子&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.lixiaojun.tk/2019/01/21/blog搭建过程/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo-indigo+github+nginx博客搭建过程》 — 夜航的小王子&url=http://www.lixiaojun.tk/2019/01/21/blog搭建过程/&via=http://www.lixiaojun.tk" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.lixiaojun.tk/2019/01/21/blog搭建过程/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.lixiaojun.tk/2019/01/21/blog搭建过程/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>C语言标准库常用字符串处理函数 | 夜航的小王子 | 记录学习的技能和遇到的问题</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="C语言">
+    <meta name="description" content="string.hstring.h中定义了各种操作字符数组的函数，分为以mem开头和以str开头的两种。以mem开头的函数以给定长度为标准对字符串内存进行操作，以str开头的函数，以’\0’为结尾对字符数组进行操作。 chr结尾的函数123456//在参数str所指向的字符串内存的前n个字节中搜索第一次出现字符c的位置void *memchr(const void *str, int c, size">
+<meta name="keywords" content="C语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言标准库常用字符串处理函数">
+<meta property="og:url" content="http://www.lixiaojun.tk/2019/02/14/C语言标准库常用字符串处理函数/index.html">
+<meta property="og:site_name" content="夜航的小王子">
+<meta property="og:description" content="string.hstring.h中定义了各种操作字符数组的函数，分为以mem开头和以str开头的两种。以mem开头的函数以给定长度为标准对字符串内存进行操作，以str开头的函数，以’\0’为结尾对字符数组进行操作。 chr结尾的函数123456//在参数str所指向的字符串内存的前n个字节中搜索第一次出现字符c的位置void *memchr(const void *str, int c, size">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-20T08:51:26.150Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C语言标准库常用字符串处理函数">
+<meta name="twitter:description" content="string.hstring.h中定义了各种操作字符数组的函数，分为以mem开头和以str开头的两种。以mem开头的函数以给定长度为标准对字符串内存进行操作，以str开头的函数，以’\0’为结尾对字符数组进行操作。 chr结尾的函数123456//在参数str所指向的字符串内存的前n个字节中搜索第一次出现字符c的位置void *memchr(const void *str, int c, size">
+    
+        <link rel="alternate" type="application/atom+xml" title="夜航的小王子" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Li Xiaojun</h5>
+          <a href="mailto:982090951@qq.com" title="982090951@qq.com" class="mail">982090951@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/lixiaojun2914" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">C语言标准库常用字符串处理函数</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">C语言标准库常用字符串处理函数</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-02-14T00:09:19.000Z" itemprop="datePublished" class="page-time">
+  2019-02-14
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#string-h"><span class="post-toc-number">1.</span> <span class="post-toc-text">string.h</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#chr结尾的函数"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">chr结尾的函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cpy结尾的函数"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">cpy结尾的函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cmp结尾的函数"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">cmp结尾的函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#以cat结尾的函数"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">以cat结尾的函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#memset"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">memset</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#strlen"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">strlen</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#strstr"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">strstr</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-C语言标准库常用字符串处理函数" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">C语言标准库常用字符串处理函数</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-02-14 08:09:19" datetime="2019-02-14T00:09:19.000Z" itemprop="datePublished">2019-02-14</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="string-h"><a href="#string-h" class="headerlink" title="string.h"></a>string.h</h1><p>string.h中定义了各种操作字符数组的函数，分为以mem开头和以str开头的两种。以mem开头的函数以给定长度为标准对字符串内存进行操作，以str开头的函数，以’\0’为结尾对字符数组进行操作。</p>
+<h2 id="chr结尾的函数"><a href="#chr结尾的函数" class="headerlink" title="chr结尾的函数"></a>chr结尾的函数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在参数str所指向的字符串内存的前n个字节中搜索第一次出现字符c的位置</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">memchr</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *str, <span class="keyword">int</span> c, <span class="keyword">size_t</span> n)</span></span></span><br><span class="line"><span class="function"><span class="comment">//在参数str所指向的字符串中搜索第一次出现字符c的位置</span></span></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strchr</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str, <span class="keyword">int</span> c)</span></span></span><br><span class="line"><span class="function"><span class="comment">//在参数str所指向的字符串中搜索最后一次出现字符c的位置</span></span></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strrchr</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str, <span class="keyword">int</span> c)</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="cpy结尾的函数"><a href="#cpy结尾的函数" class="headerlink" title="cpy结尾的函数"></a>cpy结尾的函数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//从src复制n个字符到dest</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">memcpy</span><span class="params">(<span class="keyword">void</span> *dest, <span class="keyword">const</span> <span class="keyword">void</span> *src, <span class="keyword">size_t</span> n)</span></span></span><br><span class="line"><span class="function"><span class="comment">//把src所指向的字符串复制到dest</span></span></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strcpy</span><span class="params">(<span class="keyword">char</span> *dest, <span class="keyword">const</span> <span class="keyword">char</span> *src)</span></span></span><br><span class="line"><span class="function"><span class="comment">//把src所指向的字符串复制到dest，最多复制n个字符</span></span></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strncpy</span><span class="params">(<span class="keyword">char</span> *dest, <span class="keyword">const</span> <span class="keyword">char</span> *src, <span class="keyword">size_t</span> n)</span></span></span><br></pre></td></tr></table></figure>
+<p>在使用cpy函数时，一定要注意判断源字符串和目的字符串的长度，否则会发生缓冲区溢出。</p>
+<h2 id="cmp结尾的函数"><a href="#cmp结尾的函数" class="headerlink" title="cmp结尾的函数"></a>cmp结尾的函数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//把str1和str2的前n个字节进行比较</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">memcmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *str1, <span class="keyword">const</span> <span class="keyword">void</span> *str2, <span class="keyword">size_t</span> n)</span></span></span><br><span class="line"><span class="function"><span class="comment">//把str1所指向的字符串和str2所指向的字符串进行比较</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">strcmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str1, <span class="keyword">const</span> <span class="keyword">char</span> *str2)</span></span></span><br><span class="line"><span class="function"><span class="comment">//把str1和str2进行比较，最多比较前n个字节</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">strncmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str1, <span class="keyword">const</span> <span class="keyword">char</span> *str2, <span class="keyword">size_t</span> n)</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="以cat结尾的函数"><a href="#以cat结尾的函数" class="headerlink" title="以cat结尾的函数"></a>以cat结尾的函数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//把src所指向的字符串追加到dest所指向的字符串的结尾</span></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strcat</span><span class="params">(<span class="keyword">char</span> *dest, <span class="keyword">const</span> <span class="keyword">char</span> *src)</span></span></span><br><span class="line"><span class="function"><span class="comment">//把src所指向的字符串追加到dest 所指向的字符串的结尾，直到n字符长度为止</span></span></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strncat</span><span class="params">(<span class="keyword">char</span> *dest, <span class="keyword">const</span> <span class="keyword">char</span> *src, <span class="keyword">size_t</span> n)</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="memset"><a href="#memset" class="headerlink" title="memset"></a>memset</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//复制字符c到参数str所指向的字符串的前n个字符</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">memset</span><span class="params">(<span class="keyword">void</span> *str, <span class="keyword">int</span> c, <span class="keyword">size_t</span> n)</span></span></span><br></pre></td></tr></table></figure>
+<p>使用memset填充数组时，应当理解memset是以字节为单位进行赋值的，例如memset(a,1,20),若a为int数组，在32位计算机中，a中每个数组元素的值都为0x01010101,即16843009</p>
+<h2 id="strlen"><a href="#strlen" class="headerlink" title="strlen"></a>strlen</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//计算字符串 str 的长度，直到空结束字符，但不包括空结束字符</span></span><br><span class="line"><span class="keyword">size_t</span> <span class="built_in">strlen</span>(<span class="keyword">const</span> <span class="keyword">char</span> *str)</span><br></pre></td></tr></table></figure>
+<h2 id="strstr"><a href="#strstr" class="headerlink" title="strstr"></a>strstr</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在字符串str中查找第一次出现字符串needle（不包含空结束字符）的位置。</span></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">strstr</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str, <span class="keyword">const</span> <span class="keyword">char</span> *dest)</span></span></span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-02-20T08:51:26.150Z" itemprop="dateUpdated">2019-02-20 16:51:26</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://www.lixiaojun.tk">
+            <img src="/img/avatar.jpg" alt="Li Xiaojun">
+            Li Xiaojun
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.lixiaojun.tk/2019/02/14/C语言标准库常用字符串处理函数/&title=《C语言标准库常用字符串处理函数》 — 夜航的小王子&pic=http://www.lixiaojun.tk/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.lixiaojun.tk/2019/02/14/C语言标准库常用字符串处理函数/&title=《C语言标准库常用字符串处理函数》 — 夜航的小王子&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.lixiaojun.tk/2019/02/14/C语言标准库常用字符串处理函数/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C语言标准库常用字符串处理函数》 — 夜航的小王子&url=http://www.lixiaojun.tk/2019/02/14/C语言标准库常用字符串处理函数/&via=http://www.lixiaojun.tk" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.lixiaojun.tk/2019/02/14/C语言标准库常用字符串处理函数/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/02/15/进程在内存中的分节/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">进程在内存中的分节</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/01/21/blog搭建过程/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">hexo-indigo+github+nginx博客搭建过程</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Li Xiaojun &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.lixiaojun.tk/2019/02/14/C语言标准库常用字符串处理函数/&title=《C语言标准库常用字符串处理函数》 — 夜航的小王子&pic=http://www.lixiaojun.tk/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.lixiaojun.tk/2019/02/14/C语言标准库常用字符串处理函数/&title=《C语言标准库常用字符串处理函数》 — 夜航的小王子&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.lixiaojun.tk/2019/02/14/C语言标准库常用字符串处理函数/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C语言标准库常用字符串处理函数》 — 夜航的小王子&url=http://www.lixiaojun.tk/2019/02/14/C语言标准库常用字符串处理函数/&via=http://www.lixiaojun.tk" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.lixiaojun.tk/2019/02/14/C语言标准库常用字符串处理函数/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.lixiaojun.tk/2019/02/14/C语言标准库常用字符串处理函数/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
