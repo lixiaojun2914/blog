@@ -46,4 +46,4 @@ plt.plot(x, y2)
 
 plt.show()
 ```
-![](./matplotlib实例.png)
+![](https://github.com/lixiaojun2914/blog/blob/master/source/_posts/matplotlib%E5%AE%9E%E4%BE%8B.png?raw=true)
